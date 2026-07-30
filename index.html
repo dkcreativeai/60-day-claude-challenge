@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swatchboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Swatchboard</h1>
+    <p>Extract a color palette from any image.</p>
+  </header>
+
+  <main>
+
+    <div id="drop-zone">
+      <input type="file" id="file-input" accept="image/*" hidden>
+      <div id="drop-zone-content">
+        <div id="upload-icon">&#8593;</div>
+        <p><strong>Drag &amp; drop an image here</strong></p>
+        <p class="subtext">or click to browse</p>
+      </div>
+    </div>
+
+    <p id="error-message" class="hidden"></p>
+
+    <div id="preview-area" class="hidden">
+      <img id="preview-image" src="" alt="Uploaded preview">
+      <p id="processing-text" class="hidden">Processing...</p>
+    </div>
+
+    <div id="swatches-container" class="hidden"></div>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.4.0/color-thief.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="js/convert.js"></script>
+  <script src="js/extract.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
